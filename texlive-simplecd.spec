@@ -5,7 +5,7 @@
 # catalog-license lppl1.2
 # catalog-version 1,0
 Name:		texlive-simplecd
-Version:	1.0
+Version:	1,0
 Release:	1
 Summary:	Simple CD, DVD covers for printing
 Group:		Publishing
@@ -57,6 +57,7 @@ sized keepcase; - disk sleeve; - one sided DVD keepcase inlay;
 #- source
 %doc %{_texmfdistdir}/source/latex/simplecd/simplecd.dtx
 %doc %{_texmfdistdir}/source/latex/simplecd/simplecd.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -67,3 +68,5 @@ sized keepcase; - disk sleeve; - one sided DVD keepcase inlay;
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
