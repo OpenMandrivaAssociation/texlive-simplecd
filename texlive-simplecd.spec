@@ -5,7 +5,7 @@
 # catalog-license lppl1.2
 # catalog-version 1,0
 Name:		texlive-simplecd
-Version:	1,0
+Version:	1.0
 Release:	1
 Summary:	Simple CD, DVD covers for printing
 Group:		Publishing
