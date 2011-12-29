@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 The package provides printable cut-outs for various CD, DVD and
@@ -34,20 +31,12 @@ keepcase; - normal DVD keepcase; - Blu-Ray keepcase; - custom-
 sized keepcase; - disk sleeve; - one sided DVD keepcase inlay;
 - one sided Blu-Ray keepcase inlay; and - custom-sized inlay.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -58,7 +47,6 @@ sized keepcase; - disk sleeve; - one sided DVD keepcase inlay;
 #- source
 %doc %{_texmfdistdir}/source/latex/simplecd/simplecd.dtx
 %doc %{_texmfdistdir}/source/latex/simplecd/simplecd.ins
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -69,5 +57,3 @@ sized keepcase; - disk sleeve; - one sided DVD keepcase inlay;
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
