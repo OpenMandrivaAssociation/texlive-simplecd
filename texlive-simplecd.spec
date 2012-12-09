@@ -57,3 +57,18 @@ sized keepcase; - disk sleeve; - one sided DVD keepcase inlay;
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
++ Revision: 756026
+- Rebuild to reduce used resources
+
+* Mon Nov 07 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
++ Revision: 727641
+- texlive-simplecd
+- texlive-simplecd
+- texlive-simplecd
+- texlive-simplecd
+- texlive-simplecd
+
