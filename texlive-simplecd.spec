@@ -6,7 +6,7 @@
 # catalog-version 1.4
 Name:		texlive-simplecd
 Version:	1.4
-Release:	4
+Release:	5
 Summary:	Simple CD, DVD covers for printing
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/simplecd
