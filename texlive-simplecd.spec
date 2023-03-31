@@ -1,6 +1,6 @@
 Name:		texlive-simplecd
 Version:	29260
-Release:	1
+Release:	2
 Summary:	Simple CD, DVD covers for printing
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/simplecd
