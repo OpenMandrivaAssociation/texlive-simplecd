@@ -3,7 +3,7 @@ Version:	29260
 Release:	2
 Summary:	Simple CD, DVD covers for printing
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/simplecd
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/simplecd
 License:	LPPL1.2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/simplecd.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/simplecd.doc.r%{version}.tar.xz
